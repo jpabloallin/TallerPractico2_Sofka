@@ -13,7 +13,7 @@ public class UnmannedSpaceship extends Spaceship{
 
     @Override
     public String toString() {
-        return super.toString() +  "destinationPlanet: " + destinationPlanet;
+        return super.toString() + "\ndPlaneta de destino: " + destinationPlanet;
     }
 
     @Override
@@ -22,8 +22,8 @@ public class UnmannedSpaceship extends Spaceship{
     }
 
     @Override
-    public String propulsionFuel() {
-        return "";
+    public String funFact() {
+        return "El 4 de octubre de 1957, la Unión Soviética lanzó el Sputnik 1, el primer satélite artificial de la Tierra en la historia de la humanidad.";
     }
 
     

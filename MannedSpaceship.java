@@ -13,17 +13,17 @@ public class MannedSpaceship extends Spaceship {
 
     @Override
     public String toString() {
-        return super.toString() + "crewNumber: " + crewNumber;
+        return super.toString() + "\nNúmero de tripulantes: " + crewNumber;
     }
 
     @Override
     public String propose() {
-        return "u propósito consiste en mandar seres humanos al espacio para tareas de reparación, mantenimiento o investigación.";
+        return "El propósito consiste en mandar seres humanos al espacio para tareas de reparación, mantenimiento o investigación.";
     }
     
     @Override
-    public String propulsionFuel() {
-        return "";
+    public String funFact() {
+        return "El cosmonauta soviético Yuri Gagarin se convirtió en la primera persona en viajar al espacio cuando orbitó en torno a la Tierra en una nave espacial Vostok el 12 de abril de 1961.";
     }
     
 

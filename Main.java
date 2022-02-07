@@ -8,6 +8,8 @@ public class Main {
     public static void main(String[] args) {
         //crear nave
         createSpaceship();
+        //mostrar datos de cada nave
+        showSpaceshipsCreated();
     }
     
     public static void createSpaceship(){
@@ -19,27 +21,30 @@ public class Main {
                 System.out.println("Digite que tipo de nave desea");
                 System.out.println("1. Nave sin tripulantes");
                 System.out.println("2. Nave con tripulantes");
-                System.out.println("Opción; ");
+                System.out.println("3. Transbordador espacial o lanzadera espacial");
+                System.out.print("Opción: ");
                 option = entry.nextInt();
-            }while(option<1 || option>2);
+                entry.nextLine();
+            }while(option<1 || option>3);
 
             switch(option){
-                case 1: //sin tripulantes
+                case 1: createUnmannedSpaceship();//sin tripulantes
                     break;
-                case 2: //nave con tripulantes
+                case 2: createMannedSpaceship();//nave con tripulantes
+                    break;
+                case 3: createSpaceShuttle(); //vehiculo lanzadera
                     break;
             }
 
-            System.out.println("\nDesea crear otra nave(s/n: ");
+            System.out.print("\nDesea crear otra nave(s/n): ");
             response = entry.next().charAt(0);
-            System.out.println("");
+            entry.nextLine();
 
         } while (response =='s' || response =='S');
         
     }
 
     public static void createUnmannedSpaceship(){
-        
         String name;
         String weight;
         String country;
@@ -48,7 +53,7 @@ public class Main {
         System.out.print("\nDigite el nombre de la nave sin tripulantes: ");
         name = entry.nextLine();
 
-        System.out.print("Digite ekl peso de la nave sin tripulantes: ");
+        System.out.print("Digite el peso de la nave sin tripulantes: ");
         weight = entry.nextLine();
 
         System.out.print("Digite a que pais pertenece la nave sin tripulantes: ");
@@ -57,6 +62,63 @@ public class Main {
         System.out.print("Digite el planeta de destino de la nave sin tripulantes: ");
         destinationPlanet = entry.nextLine();
 
-        UnmannedSpaceship unmannedSpaceship = new UnmannedSpaceship(name, weight, country, destinationPlanet);
+        UnmannedSpaceship unmannedspaceship = new UnmannedSpaceship(name, weight, country, destinationPlanet);
+        //guardamos naves sin tripulantes dentro de arreglos de naves
+        spaceship.add(unmannedspaceship);
+    }
+
+    public static void createMannedSpaceship(){
+        String name;
+        String weight;
+        String country;
+        int crewNumber;
+
+        System.out.print("\nDigite el nombre de la nave con tripulantes: ");
+        name = entry.nextLine();
+
+        System.out.print("Digite el peso de la nave con tripulantes: ");
+        weight = entry.nextLine();
+
+        System.out.print("Digite a que pais pertenece la nave con tripulantes: ");
+        country = entry.nextLine();
+
+        System.out.print("Digite el número de tripulantes en la nave: ");
+        crewNumber = entry.nextInt();
+
+        MannedSpaceship mannedspaceship = new MannedSpaceship(name, weight, country, crewNumber);
+        //guardamos naves con tripulantes dentro de arreglos de naves
+        spaceship.add(mannedspaceship);
+    }
+
+    public static void createSpaceShuttle(){
+        String name;
+        String weight;
+        String country;
+        int capacity;
+
+        System.out.print("\nDigite el nombre del transbordador espacial o lanzadera espacial: ");
+        name = entry.nextLine();
+
+        System.out.print("Digite el peso del transbordador espacial o lanzadera espacial: ");
+        weight = entry.nextLine();
+
+        System.out.print("Digite a que pais pertenece el transbordador espacial o lanzadera espacial: ");
+        country = entry.nextLine();
+
+        System.out.print("Digite la capacidad del transbordador espacial o lanzadera espacial: ");
+        capacity = entry.nextInt();
+
+        SpaceShuttle spaceshuttle = new SpaceShuttle(name, weight, country, capacity);
+        //guardamos naves con tripulantes dentro de arreglos de naves
+        spaceship.add(spaceshuttle);
+    }
+
+    public static void showSpaceshipsCreated(){
+        //recorriendo arreglo de naves creadas
+        for (Spaceship ship: spaceship) {
+            System.out.println(ship.toString());
+            System.out.println("Propósito: "+ship.propose()+ "\nDato curioso: "+ ship.funFact());   
+            System.out.println("");     
+        }
     }
 }

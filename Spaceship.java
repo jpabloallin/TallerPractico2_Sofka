@@ -24,11 +24,11 @@ public abstract class Spaceship {
 
     @Override
     public String toString() {
-        return "name: " + name + " weight: " + weight +" country: " + country;
+        return "Nombre: " + name + "\nPeso: " + weight + "\nPaís de origen: " + country;
     }
 
     public abstract String propose();
 
-    public abstract String propulsionFuel();
+    public abstract String funFact();
     
 }
