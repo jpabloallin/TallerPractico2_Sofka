@@ -1,4 +1,4 @@
-public abstract class Spaceship {
+public abstract class Spaceship implements ISpaceshipAction{
    
     protected String name;
     protected String weight;

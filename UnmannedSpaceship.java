@@ -26,13 +26,15 @@ public class UnmannedSpaceship extends Spaceship{
         return "El 4 de octubre de 1957, la Unión Soviética lanzó el Sputnik 1, el primer satélite artificial de la Tierra en la historia de la humanidad.";
     }
 
-    
+    @Override
+    public String takingOff() {
+        
+        return "3,2,1... \nNave sin tripulantes despegando";
+    }
 
-    
-
-    
-    
-    
-
-    
+    @Override
+    public String landing() {
+        
+        return "...Aterrizando en 3,2,1.  \nAterrizaje satisfactorio.";
+    }
 }

@@ -143,7 +143,7 @@ public class Main {
         //recorriendo arreglo de naves creadas
         for (Spaceship ship: spaceship) {
             System.out.println(ship.toString());
-            System.out.println("Propósito: "+ship.propose()+ "\nDato curioso: "+ ship.funFact());   
+            System.out.println("Propósito: "+ship.propose()+ "\nDato curioso: "+ ship.funFact() + ship.takingOff() + ship.landing());   
             System.out.println("");     
         }
     }

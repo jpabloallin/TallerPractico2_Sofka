@@ -1,4 +1,4 @@
-public class RoboticSpaceship extends Spaceship {
+public class RoboticSpaceship extends Spaceship  {
     
     private String fuelType;
 
@@ -24,6 +24,18 @@ public class RoboticSpaceship extends Spaceship {
     @Override
     public String funFact() {
         return "En 2012, el SpaceX Dragon hizo historia al convertirse en la primera nave espacial robótica comercial en entregar carga a la Estación Espacial Internacional y devolver carga de manera segura a la Tierra en el mismo viaje.";
+    }
+
+    @Override
+    public String takingOff() {
+        
+        return "3,2,1... \nNave sin tripulantes despegando";
+    }
+
+    @Override
+    public String landing() {
+        
+        return "...Aterrizando en 3,2,1.  \nAterrizaje satisfactorio.";
     }
 }
 

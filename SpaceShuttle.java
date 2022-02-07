@@ -28,4 +28,15 @@ public class SpaceShuttle extends Spaceship{
         return "El más potente jamás construido pertenecía a los EE.UU. y su nombre era Saturno V. Permitió transportar la nave tripulada Apolo hasta la Luna.";
     }
     
+    @Override
+    public String takingOff() {
+        
+        return "3,2,1... \nNave sin tripulantes despegando";
+    }
+
+    @Override
+    public String landing() {
+        
+        return "...Aterrizando en 3,2,1.  \nAterrizaje satisfactorio.";
+    }
 }

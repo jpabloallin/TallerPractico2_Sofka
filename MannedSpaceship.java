@@ -25,6 +25,17 @@ public class MannedSpaceship extends Spaceship {
     public String funFact() {
         return "El cosmonauta soviético Yuri Gagarin se convirtió en la primera persona en viajar al espacio cuando orbitó en torno a la Tierra en una nave espacial Vostok el 12 de abril de 1961.";
     }
+
+    @Override
+    public String takingOff() {
+        return "3,2,1... \nNave con tripulantes despegando";
+        
+    }
+
+    @Override
+    public String landing() {
+        return "";
+    }
     
 
 }
