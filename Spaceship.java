@@ -24,7 +24,7 @@ public abstract class Spaceship {
 
     @Override
     public String toString() {
-        return "Nombre: " + name + "\nPeso: " + weight + "\nPaís de origen: " + country;
+        return "\nNombre: " + name + "\nPeso: " + weight + "\nPaís de origen: " + country;
     }
 
     public abstract String propose();

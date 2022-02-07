@@ -18,8 +18,12 @@ public class RoboticSpaceship extends Spaceship {
     
     @Override
     public String propose() {
-        return "";
+        return "La nave espacial robótica es un nave espacial sin tripulación, generalmente bajo telerobótico control. Muchas misiones espaciales son más adecuadas para la telerobótica que para tripulado operación, debido al menor costo y menores factores de riesgo.";
     }
     
+    @Override
+    public String funFact() {
+        return "En 2012, el SpaceX Dragon hizo historia al convertirse en la primera nave espacial robótica comercial en entregar carga a la Estación Espacial Internacional y devolver carga de manera segura a la Tierra en el mismo viaje.";
+    }
 }
 

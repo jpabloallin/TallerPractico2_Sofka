@@ -18,21 +18,24 @@ public class Main {
 
         do {
             do {
-                System.out.println("Digite que tipo de nave desea");
+                System.out.println("\nDigite que tipo de nave desea");
                 System.out.println("1. Nave sin tripulantes");
                 System.out.println("2. Nave con tripulantes");
                 System.out.println("3. Transbordador espacial o lanzadera espacial");
-                System.out.print("Opción: ");
+                System.out.println("4. Nave espacial robótica");
+                System.out.print("\nOpción: ");
                 option = entry.nextInt();
                 entry.nextLine();
-            }while(option<1 || option>3);
-
+            }while(option<1 || option>4);
+            
             switch(option){
                 case 1: createUnmannedSpaceship();//sin tripulantes
                     break;
                 case 2: createMannedSpaceship();//nave con tripulantes
                     break;
                 case 3: createSpaceShuttle(); //vehiculo lanzadera
+                    break;
+                case 4: createRoboticSpaceship();//nave robotica
                     break;
             }
 
@@ -111,6 +114,29 @@ public class Main {
         SpaceShuttle spaceshuttle = new SpaceShuttle(name, weight, country, capacity);
         //guardamos naves con tripulantes dentro de arreglos de naves
         spaceship.add(spaceshuttle);
+    }
+
+    public static void createRoboticSpaceship(){
+        String name;
+        String weight;
+        String country;
+        String fuelType;
+
+        System.out.print("\nDigite el nombre de la nave espacial robótica: ");
+        name = entry.nextLine();
+
+        System.out.print("Digite el peso de la nave espacial robótica: ");
+        weight = entry.nextLine();
+
+        System.out.print("Digite a que pais pertenece la nave espacial robótica: ");
+        country = entry.nextLine();
+
+        System.out.print("Digite el combustible utilizado por la nave espacial robótica: ");
+        fuelType = entry.nextLine();
+
+        RoboticSpaceship roboticspaceship = new RoboticSpaceship(name, weight, country, fuelType);
+        //guardamos naves con tripulantes dentro de arreglos de naves
+        spaceship.add(roboticspaceship);
     }
 
     public static void showSpaceshipsCreated(){
