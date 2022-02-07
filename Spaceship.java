@@ -28,5 +28,7 @@ public abstract class Spaceship {
     }
 
     public abstract String propose();
+
+    public abstract String propulsionFuel();
     
 }

@@ -16,9 +16,17 @@ public class UnmannedSpaceship extends Spaceship{
         return super.toString() +  "destinationPlanet: " + destinationPlanet;
     }
 
+    @Override
     public String propose(){
         return "su principal objetivo es estudiar otros cuerpos celestes.";
     }
+
+    @Override
+    public String propulsionFuel() {
+        return "";
+    }
+
+    
 
     
 
