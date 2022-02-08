@@ -62,6 +62,6 @@ public class MannedSpaceship extends Spaceship {
      */
     @Override
     public String landing() {
-        return "Tripulantes acoplándose a la Estación Espacial Internacional (ISS)";
+        return "\nTripulantes acoplándose a la Estación Espacial Internacional (ISS)";
     }
 }

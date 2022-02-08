@@ -218,7 +218,7 @@ public class Main {
      * Función para mostrar las naves espaciales creadas.
      */
     public static void showSpaceshipsCreated(){
-        
+
         /**
          * Se recorre el arreglo de las naves espaciales creadas y muestra las características de cada una.
          */
