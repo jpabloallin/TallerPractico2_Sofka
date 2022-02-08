@@ -29,13 +29,13 @@ public class RoboticSpaceship extends Spaceship  {
     @Override
     public String takingOff() {
         
-        return "3,2,1... \nNave sin tripulantes despegando";
+        return "\nNave sin tripulantes despegando en 3,2,1... ";
     }
 
     @Override
     public String landing() {
         
-        return "...Aterrizando en 3,2,1.  \nAterrizaje satisfactorio.";
+        return "\n...Aterrizando en 3,2,1. Aterrizaje satisfactorio.";
     }
 }
 

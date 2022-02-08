@@ -1,13 +1,13 @@
 public class SpaceShuttle extends Spaceship{
 
-    private int capacity;
+    private String capacity;
 
-    public SpaceShuttle(String name, String weight, String country, int capacity) {
+    public SpaceShuttle(String name, String weight, String country, String capacity) {
         super(name, weight, country);
         this.capacity = capacity;
     }
  
-    public int getCapacity() {
+    public String getCapacity() {
         return capacity;
     }
 
@@ -31,12 +31,12 @@ public class SpaceShuttle extends Spaceship{
     @Override
     public String takingOff() {
         
-        return "3,2,1... \nNave sin tripulantes despegando";
+        return "\nNave sin tripulantes despegando en 3,2,1...";
     }
 
     @Override
     public String landing() {
         
-        return "...Aterrizando en 3,2,1.  \nAterrizaje satisfactorio.";
+        return "\n...Aterrizando en 3,2,1. Aterrizaje satisfactorio.";
     }
 }

@@ -13,12 +13,12 @@ public class UnmannedSpaceship extends Spaceship{
 
     @Override
     public String toString() {
-        return super.toString() + "\ndPlaneta de destino: " + destinationPlanet;
+        return super.toString() + "\nPlaneta de destino: " + destinationPlanet;
     }
 
     @Override
     public String propose(){
-        return "su principal objetivo es estudiar otros cuerpos celestes.";
+        return "Su principal objetivo es estudiar otros cuerpos celestes.";
     }
 
     @Override
@@ -29,12 +29,12 @@ public class UnmannedSpaceship extends Spaceship{
     @Override
     public String takingOff() {
         
-        return "3,2,1... \nNave sin tripulantes despegando";
+        return "\nNave sin tripulantes despegando en 3,2,1...";
     }
 
     @Override
     public String landing() {
         
-        return "...Aterrizando en 3,2,1.  \nAterrizaje satisfactorio.";
+        return "\n...Aterrizando en 3,2,1. Aterrizaje satisfactorio.";
     }
 }

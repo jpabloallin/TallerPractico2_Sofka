@@ -19,7 +19,7 @@ public class Main {
         do {
             do {
                 System.out.println("\nDigite que tipo de nave desea");
-                System.out.println("1. Nave sin tripulantes");
+                System.out.println("\n1. Nave sin tripulantes");
                 System.out.println("2. Nave con tripulantes");
                 System.out.println("3. Transbordador espacial o lanzadera espacial");
                 System.out.println("4. Nave espacial robótica");
@@ -97,7 +97,7 @@ public class Main {
         String name;
         String weight;
         String country;
-        int capacity;
+        String capacity;
 
         System.out.print("\nDigite el nombre del transbordador espacial o lanzadera espacial: ");
         name = entry.nextLine();
@@ -109,7 +109,7 @@ public class Main {
         country = entry.nextLine();
 
         System.out.print("Digite la capacidad del transbordador espacial o lanzadera espacial: ");
-        capacity = entry.nextInt();
+        capacity = entry.nextLine();
 
         SpaceShuttle spaceshuttle = new SpaceShuttle(name, weight, country, capacity);
         //guardamos naves con tripulantes dentro de arreglos de naves

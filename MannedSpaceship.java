@@ -28,7 +28,7 @@ public class MannedSpaceship extends Spaceship {
 
     @Override
     public String takingOff() {
-        return "3,2,1... \nNave con tripulantes despegando";
+        return "\nNave con tripulantes despegando en 3,2,1... ";
         
     }
 
